@@ -1,0 +1,44 @@
+.main_content_video {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100vw;
+    overflow: hidden;
+    /* background-image: url(../imagens/main/main_content_video.mp4); */
+}
+
+.main_video {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main_title {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4vw;
+}
+
+.content_main_title {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 20pt;
+    height: 100%;
+}
+
+h1 {
+    margin: auto;
+}
+
+h1>span {
+    color: #26FF70;
+    font-weight: bold;
+}
