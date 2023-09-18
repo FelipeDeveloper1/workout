@@ -1,0 +1,61 @@
+.cursos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 10vh;
+}
+
+.content_cursos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cursos_box {
+    background-image: url(../imagens/cursos/workout_parallax.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    background-attachment: fixed;
+}
+
+.nossos_cursos {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.cursos_textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursos_title>h1 {
+    font-size: 50px;
+    text-align: justify;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cursos_subtitle {
+    width: 60%;
+}
+
+.cursos_subtitle>p {
+    text-align: justify;
+    font-size: 30px;
+    opacity: 0.7;
+    margin-top: 1vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.behavior>h1>span:hover {
+    color: blueviolet;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
