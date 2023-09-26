@@ -1,8 +1,14 @@
 const boxid = document.querySelectorAll(".card_curso")
 
-callbox = (id) => {
-    boxcalled = { id }
-    console.log(boxcalled.id)
+async function seachcursos(id) {
+    const response = await fetch('../json/cursos.json')
+    const cursos = await response.json()
+    console.log(cursos[id])
+}
+
+callbox = (index) => {
+    boxcalled = { index }
+    seachcursos(boxcalled.index)
 }
 
 boxid.forEach((value, index) => {
@@ -11,12 +17,7 @@ boxid.forEach((value, index) => {
     })
 })
 
-async function seachcursos() {
-    const response = await fetch('../json/cursos.json')
-    const cursos = await response.json()
-    console.log(cursos[0])
-}
-seachcursos()
-const openBox = (valor) => {
 
+const openBox = (valor) => {
+    const modal = document.createElement('div')
 }
