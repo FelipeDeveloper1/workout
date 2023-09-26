@@ -14,7 +14,7 @@
 }
 
 .cursos_box {
-    background-image: url(../imagens/cursos/workout_parallax.jpg);
+    background-image: url(../imagens/cursos/icons/crossfitbackground.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,6 +24,8 @@
 
 .nossos_cursos {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -35,22 +37,15 @@
     justify-content: center;
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .cursos_title>h1 {
-    font-size: 50px;
-    text-align: justify;
+    font-size: clamp(1rem, 0.5469rem + 2.2656vw, 2.8125rem);
     cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.cursos_subtitle {
-    width: 60%;
-}
-
-.cursos_subtitle>p {
-    text-align: justify;
-    font-size: 30px;
-    opacity: 0.7;
-    margin-top: 1vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -58,4 +53,81 @@
     color: blueviolet;
     cursor: pointer;
     transition: all 0.4s ease;
+}
+
+.cursos_nav {
+    display: flex;
+    align-items: center;
+}
+
+.card_curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 2vw;
+    height: 30vh;
+    width: 18vw;
+    border-top: 2px solid #164049;
+}
+
+.card_curso:nth-child(1) {
+    margin-right: 2vw;
+}
+
+.card_curso:hover {
+    background-image: linear-gradient(#164049, #19272D, #151515);
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.sub_text_curso {
+    text-align: left;
+}
+
+@media(max-width: 1100px) {
+    .nossos_cursos {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    .cursos_textos {
+        width: 100%;
+    }
+    .cursos_nav {
+        margin-top: 2vh;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .card_curso {
+        width: 30vw;
+    }
+}
+
+@media(max-width: 800px) {
+    .cursos_nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .info {
+        align-items: center;
+    }
+    .card_curso:nth-child(1) {
+        margin-right: 0vw;
+    }
+    .card_curso {
+        width: 40vw;
+    }
+    .descricao {
+        width: 100%;
+    }
+    .sub_text_curso {
+        text-align: center;
+    }
 }
