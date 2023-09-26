@@ -1,15 +1,5 @@
 const boxid = document.querySelectorAll(".card_curso")
-
-async function seachcursos(id) {
-    const response = await fetch('../json/cursos.json')
-    const cursos = await response.json()
-    console.log(cursos[id])
-}
-
-callbox = (index) => {
-    boxcalled = { index }
-    seachcursos(boxcalled.index)
-}
+const modal = document.querySelector('.modal')
 
 boxid.forEach((value, index) => {
     value.addEventListener('click', () => {
@@ -17,7 +7,23 @@ boxid.forEach((value, index) => {
     })
 })
 
+callbox = (index) => {
+    boxcalled = { index }
+    seachcursos(boxcalled.index)
+}
+
+async function seachcursos(id) {
+    const response = await fetch('../json/cursos.json')
+    const cursos = await response.json()
+    openBox(cursos[id])
+}
+
 
 const openBox = (valor) => {
-    const modal = document.createElement('div')
+    modal.style.display = 'block'
+    const text_modal = document.createElement('p')
+    text_modal.innerHTML = valor
+    modal.insertAdjacentElement('beforeend', text_modal)
+
+
 }
