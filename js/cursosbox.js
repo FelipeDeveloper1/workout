@@ -40,6 +40,7 @@ const createContentCard = (imgCard, textCard) => {
     // criando as divs
     const Card = document.createElement('div')
     const CardImage = document.createElement('div')
+    const img = document.createElement('img')
     const CardTexto = document.createElement('div')
 
     // atribuindo estilo as divs criadas 
@@ -49,23 +50,27 @@ const createContentCard = (imgCard, textCard) => {
 
     // inserindo elas no conteudo
     Card.insertAdjacentElement('afterbegin', CardImage)
+    CardImage.insertAdjacentElement('afterbegin', img)
     Card.insertAdjacentElement('beforeend', CardTexto)
     card_modal.insertAdjacentElement('beforeend', Card)
 
     // inserindo texto
-    CardTexto.innerHTML = textCard
-    CardImage.innerHTML = imgCard
 
+
+    CardTexto.innerHTML = textCard
+    img.src = imgCard
 
 }
+
+
+
+
 const closeModal = () => {
     const QuantiCards = document.querySelectorAll('.card')
     QuantiCards.forEach((value) => {
         value.remove()
     })
     modal.style.display = 'none'
-
-
 
 }
 close.addEventListener('click', closeModal)
