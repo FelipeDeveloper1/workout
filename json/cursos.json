@@ -2,15 +2,15 @@
     "0": {
         "name": "Fitness",
         "cursos": {
-            "0": { "name": "Desafio em 24 dias", "img": "" },
-            "1": { "name": "Receitar para emagrecer", "img": "" },
-            "2": { "name": "Receitas para secar em 28 dias", "img": "" }
+            "0": { "name": "Desafio em 24 dias", "img": "img1" },
+            "1": { "name": "Receitar para emagrecer", "img": "img2" },
+            "2": { "name": "Receitas para secar em 28 dias", "img": "img3" }
         }
     },
     "1": {
         "name": "Alimentação",
-        "Cursos": {
-            "0": "Marmitas fitness saudáveis"
+        "cursos": {
+            "0": { "name": "Marmitas fitness saudáveis", "img": "img1 " }
         }
     }
 }

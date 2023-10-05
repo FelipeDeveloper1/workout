@@ -132,15 +132,3 @@
         text-align: center;
     }
 }
-
-.modal {
-    position: absolute;
-    background-color: rgb(101, 71, 71);
-    width: 40vw;
-    height: 50vh;
-    z-index: 1;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}

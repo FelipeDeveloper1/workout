@@ -1,16 +1,20 @@
 const boxid = document.querySelectorAll(".card_curso")
 const modal = document.querySelector('.modal')
+const close = document.querySelector('.close_modal')
+const card_modal = document.querySelector('.cards_modal')
 
 boxid.forEach((value, index) => {
     value.addEventListener('click', () => {
-        callbox(index)
+        // callbox(index)
+        seachcursos(index)
     })
 })
 
-callbox = (index) => {
-    boxcalled = { index }
-    seachcursos(boxcalled.index)
-}
+// callbox = (index) => {
+//     const boxcalled = { index }
+//     console.log(index)
+//     seachcursos(boxcalled.index)
+// }
 
 async function seachcursos(id) {
     const response = await fetch('../json/cursos.json')
@@ -21,9 +25,47 @@ async function seachcursos(id) {
 
 const openBox = (valor) => {
     modal.style.display = 'block'
-    const text_modal = document.createElement('p')
-    text_modal.innerHTML = valor
-    modal.insertAdjacentElement('beforeend', text_modal)
+    Object.values(valor.cursos).forEach((value) => {
+
+        createContentCard(value.img, value.name)
+    })
+
+}
+
+
+const createContentCard = (imgCard, textCard) => {
+
+    // testando os paramentros recebidos
+
+    // criando as divs
+    const Card = document.createElement('div')
+    const CardImage = document.createElement('div')
+    const CardTexto = document.createElement('div')
+
+    // atribuindo estilo as divs criadas 
+    Card.classList.add('card')
+    CardImage.classList.add('holdImg')
+    CardTexto.classList.add("text_content")
+
+    // inserindo elas no conteudo
+    Card.insertAdjacentElement('afterbegin', CardImage)
+    Card.insertAdjacentElement('beforeend', CardTexto)
+    card_modal.insertAdjacentElement('beforeend', Card)
+
+    // inserindo texto
+    CardTexto.innerHTML = textCard
+    CardImage.innerHTML = imgCard
 
 
 }
+const closeModal = () => {
+    const QuantiCards = document.querySelectorAll('.card')
+    QuantiCards.forEach((value) => {
+        value.remove()
+    })
+    modal.style.display = 'none'
+
+
+
+}
+close.addEventListener('click', closeModal)
