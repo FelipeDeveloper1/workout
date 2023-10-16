@@ -26,39 +26,49 @@ async function seachcursos(id) {
 const openBox = (valor) => {
     modal.style.display = 'block'
     Object.values(valor.cursos).forEach((value) => {
-
-        createContentCard(value.img, value.name)
+        createContentCard(value.img, value.name, value.direct)
     })
 
 }
 
 
-const createContentCard = (imgCard, textCard) => {
+const createContentCard = (imgCard, textCard, direct) => {
+    console.log(direct)
 
     // testando os paramentros recebidos
-
     // criando as divs
     const Card = document.createElement('div')
     const CardImage = document.createElement('div')
     const img = document.createElement('img')
-    const CardTexto = document.createElement('div')
+    const HoldText = document.createElement('div')
+    const CardTexto = document.createElement('p')
+    const link = document.createElement('a')
 
     // atribuindo estilo as divs criadas 
     Card.classList.add('card')
     CardImage.classList.add('holdImg')
-    CardTexto.classList.add("text_content")
+    HoldText.classList.add("text_content")
+    link.classList.add('link')
+    CardTexto.classList.add('card_text')
+
 
     // inserindo elas no conteudo
     Card.insertAdjacentElement('afterbegin', CardImage)
     CardImage.insertAdjacentElement('afterbegin', img)
-    Card.insertAdjacentElement('beforeend', CardTexto)
+    Card.insertAdjacentElement('beforeend', HoldText)
+    HoldText.insertAdjacentElement('afterbegin', CardTexto)
+    HoldText.insertAdjacentElement('beforeend', link)
     card_modal.insertAdjacentElement('beforeend', Card)
 
     // inserindo texto
 
-
     CardTexto.innerHTML = textCard
     img.src = imgCard
+
+    // configurando o botão
+    link.target = "_blank"
+    link.innerText = 'Evolua'
+    link.href = direct
 
 }
 

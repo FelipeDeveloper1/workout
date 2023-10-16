@@ -68,7 +68,8 @@
 
 .card>.text_content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     height: 30%;
     border: 3px solid black;
@@ -76,4 +77,28 @@
     font-size: clamp(0.5rem, 0.56rem + 1.26vw, 1.25rem);
     text-align: center;
     color: black;
+}
+
+.card_text {
+    color: black;
+    margin-top: 2%;
+}
+
+.link {
+    box-shadow: 0px 5px 0px 0px #000000;
+    background-color: transparent;
+    border-radius: 28px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 13px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.link:hover {
+    background-color: blueviolet;
 }
