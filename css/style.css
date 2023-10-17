@@ -74,19 +74,22 @@ ul>li:hover {
 }
 
 @media(max-width: 900px) {
-    nav {
+    .menu {
         position: absolute;
-        justify-content: center;
         background-color: black;
         height: 87vh;
         width: 40vw;
         top: 13vh;
         z-index: 1;
-        left: -40vw;
+        left: -100vw;
     }
     ul {
+        position: relative;
         flex-direction: column;
         height: 100%;
+    }
+    ul>li {
+        width: 40vw;
     }
     .open_menu {
         display: block;
@@ -98,6 +101,15 @@ ul>li:hover {
 
 .active {
     left: 0vw;
+}
+
+@media(max-width: 600px) {
+    .menu {
+        width: 60vw;
+    }
+    ul>li {
+        width: 60vw;
+    }
 }
 
 @keyframes bringlinks {
