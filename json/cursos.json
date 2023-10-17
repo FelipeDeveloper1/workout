@@ -2,9 +2,9 @@
     "0": {
         "name": "Fitness",
         "cursos": {
-            "0": { "name": "Desafio em 24 dias", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/Y85607737V" },
-            "1": { "name": "Receitar para emagrecer", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/W85265204J" },
-            "2": { "name": "Receitas para secar em 28 dias", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/E86012406W?dp=1" }
+            "0": { "name": "Desafio em 24 dias", "img": "../imagens/cursos/cards/desafio_24_dias.png", "direct": "https://go.hotmart.com/Y85607737V" },
+            "1": { "name": "Receitar para emagrecer", "img": "../imagens/cursos/cards/receitas_para_emagrecer.jpg", "direct": "https://go.hotmart.com/W85265204J" },
+            "2": { "name": "Receitas para secar em 28 dias", "img": "../imagens/cursos/cards/secar_em_28_dias.PNG", "direct": "https://go.hotmart.com/E86012406W?dp=1" }
 
 
 
@@ -13,7 +13,7 @@
     "1": {
         "name": "Alimentação",
         "cursos": {
-            "0": { "name": "Marmitas fitness saudáveis", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/H86113253S?dp=1" }
+            "0": { "name": "Marmitas fitness saudáveis", "img": "../imagens/cursos/cards/curso_de_marmita.jpg", "direct": "https://go.hotmart.com/H86113253S?dp=1" }
 
         }
     }
