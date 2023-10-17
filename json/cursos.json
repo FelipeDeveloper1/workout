@@ -7,12 +7,14 @@
             "2": { "name": "Receitas para secar em 28 dias", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/E86012406W?dp=1" }
 
 
+
         }
     },
     "1": {
         "name": "Alimentação",
         "cursos": {
             "0": { "name": "Marmitas fitness saudáveis", "img": "../imagens/cursos/cards/teste.jpg", "direct": "https://go.hotmart.com/H86113253S?dp=1" }
+
         }
     }
 }

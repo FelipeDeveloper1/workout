@@ -33,7 +33,6 @@ const openBox = (valor) => {
 
 
 const createContentCard = (imgCard, textCard, direct) => {
-    console.log(direct)
 
     // testando os paramentros recebidos
     // criando as divs
@@ -67,7 +66,7 @@ const createContentCard = (imgCard, textCard, direct) => {
 
     // configurando o botão
     link.target = "_blank"
-    link.innerText = 'Evolua'
+    link.innerText = 'EVOLUIR'
     link.href = direct
 
 }

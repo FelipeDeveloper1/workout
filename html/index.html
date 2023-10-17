@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icons/websiteIcon/academia.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/metodos.css">
@@ -22,16 +23,22 @@
                 <p>RENOVE-SE</p>
             </div>
             <nav class="menu">
-                <ul>
-                    <li class="links">HOME</li>
-                    <li class="links">SOBRE</li>
-                    <li class="links">CURSOS</li>
+                <ul class="menu_nav">
+                    <li class="links">
+                        <a href="#home">HOME</a>
+                    </li>
+                    <li class="links">
+                        <a href="#sobre">SOBRE</a>
+                    </li>
+                    <li class="links">
+                        <a href="#cursos">CURSOS</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="main_content_video">
+        <section class="main_content_video" id="home">
             <video autoplay loop muted plays-inline disablePictureInPicture class="main_video">
                 <source src="../imagens/main/main_content_video.mp4" type="video/mp4">
             </video>
@@ -44,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section class="metodos">
+        <section class="metodos" id="sobre">
             <div class="scroll_down">
                 <img src="../imagens/icons/arrow_down.png" alt="" srcset="">
             </div>
@@ -68,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="cursos">
+        <section class="cursos" id="cursos">
 
             <div class="content_cursos">
                 <div class="cursos_box">
